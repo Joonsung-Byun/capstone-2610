@@ -1,0 +1,27 @@
+
+header, nav, main, footer {
+    max-width: 60rem;
+    margin: auto;
+}
+
+#mainWrapper {
+    .cards {
+    flex-basis: 22%;
+}
+#clients {
+    .flexMaker2 {
+        section {
+            flex-basis: 15%;
+        }
+    }
+}
+}
+
+footer {
+    .footerflex {
+      section{
+        padding-bottom: 1.2rem;
+        flex-basis: 33%;
+      }
+    }
+  }

@@ -1,0 +1,224 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+    font-family: 'Sarabun', sans-serif;
+  }
+  
+  /*---- apply a natural box layout model to all elements -------*/
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    padding: 0.7rem;
+    display: grid;
+    grid-template-columns: 51px auto 45px;
+    gap: 8px;
+    #hamburgerBtn {
+      background-color: transparent;
+      border: none;
+      font-size: 1.5rem;
+      padding: .2rem;
+    }  
+  
+  }
+    
+  
+
+  #primaryNav {
+    position: absolute;
+    width: 100%;
+    display: none;
+    background-color: white;
+    li {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    }
+    li.active {
+      background-color: #eee;
+    }
+    li.active a{
+      color: red;
+
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      color: black;
+      padding: .5rem;
+      text-align: right;
+      font-size: 1.1rem;
+      font-weight: $lightWeight;
+    }
+    a:hover {
+      color: rgb(20, 31, 180);
+    }
+  }
+  
+  #primaryNav.open {
+    display: block;
+    z-index: 999;
+  }
+  
+  #mainWrapper {
+    h2:nth-child(1) {
+      text-align: center;
+      padding-bottom: 0.5rem;
+      color: rgb(114, 158, 241);
+      font-weight: $boldWeight;
+      font-size: 2rem;
+    }
+    h4 {
+      text-align: center;
+      padding-bottom: .4rem;
+    }
+    .hero {
+      position: relative;
+      video {
+        width: 100%;
+        height: auto;
+        // position: absolute;
+        padding-bottom: 0.5rem;
+      }
+      .overText{
+        position: absolute;
+          bottom: 10px;
+          left: 0px;
+          padding: 10px;
+          background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(131, 131, 131, 0.464) 40%);
+        h4 {
+          color: white;
+          text-shadow: 0 0 2px #000;
+        }
+      } 
+    } //end of the Hero
+    
+    h2 {
+      font-weight: $normalWeight;
+      text-align: center;
+      padding-bottom: 1.5rem;
+
+    }
+
+    .flexMaker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cards {
+      margin: 0 auto 20px;
+      flex-basis: 70%;
+      border: 1px solid rgba(153, 153, 153, 0.25);
+      border-radius: 15px;
+      overflow: hidden;
+      h4 {
+        background-color: rgb(63, 138, 76);
+        color: white;
+        padding: .5rem;
+        font-weight: $boldWeight;
+        font-size: 1.3rem;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      ul {
+        padding: 1rem;
+        list-style: none;
+        li {
+          padding: .3rem;
+        }
+        li::before {
+          content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+          color: rgb(25, 137, 228); /* Change the color */
+          font-weight: bold; /* If you want it to be bold */
+          display: inline-block; /* Needed to add space between the bullet and the text */
+          width: 1em; /* Also needed for space (tweak if needed) */
+          margin-left: -0.5em; /* Also needed for space (tweak if needed) */
+        }
+      }
+    }
+
+    #clients {
+      background-color: #ffffff;
+      h2 {
+        padding-top: 1.5rem;
+        font-weight: $normalWeight;
+        text-align: center;
+        padding-bottom: 1.5rem;
+        color: black;
+        
+      }
+      .flexMaker2 {
+       
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        section{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-basis: 40%;
+          margin-bottom: 20px;
+          img {
+            width: 50%;
+            height: auto;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  #footerWrapper {
+    background-color: black;
+  }
+
+  footer {
+    h3 {
+      padding: 1.5rem;
+      text-align: center;
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: $normalWeight;
+        font-size: 1.3rem;
+      }
+    }
+    .footerflex {
+      margin: 0 auto;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed #a7a7a7;
+      section{
+        padding-bottom: 1.2rem;
+        address {
+          color: #a7a7a7;
+          font-size: 1.4rem;
+          padding: 0 0 10px 10px;
+        }
+        p {
+          color: white;
+          padding: 0 0 0 20px;
+        }
+      }
+    }
+    .legal {
+      color: white;
+      text-align: center;
+      padding: 1.3rem;
+      font-size: 1rem;
+    }
+  }
+
+  
+  

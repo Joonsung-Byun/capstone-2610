@@ -1,0 +1,82 @@
+#mainWrapper {
+    .cards {
+    flex-basis: 45%;
+}
+    #clients {
+        .flexMaker2 {
+            section {
+                flex-basis: 20%;
+            }
+        }
+    }
+}
+
+footer {
+    .footerflex {
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed #a7a7a7;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: auto;
+      section{
+        padding-bottom: 1.2rem;
+        flex-basis: 48%;
+      }
+    }
+  }
+
+  header {
+    padding: 0.7rem 0 0 2vw;
+    display: grid;
+    grid-template-columns: 51px auto;
+    gap: 8px;
+    #hamburgerBtn {
+      display: none;
+    }  
+  
+  }
+
+  #primaryNav {
+    position: relative;
+    display: block;
+    background-color: white;
+    padding-bottom: 1.2rem;
+    ul {
+        width: 100%;
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+    }
+    li {
+      border-bottom: none
+    }
+    li.active {
+      background-color: white;
+    }
+    li.active a{
+      color: red;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      color: black;
+      padding: .5rem;
+      text-align: right;
+      font-size: 1.1rem;
+      font-weight: $lightWeight;
+    }
+    a:hover {
+      color: rgb(20, 31, 180);
+    }
+
+    li.active a:hover {
+        color: rgb(20, 31, 180);
+      }
+  }
+  
+  #primaryNav.open {
+    display: flex;
+    z-index: 999;
+  }
